@@ -1,0 +1,37 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    
+}
+body {
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+
+    box-sizing: border-box;
+}
+
+
+.logo {
+   padding-left: 380px;
+   height: 150px;
+}
+.navmenu{
+    display: flex;
+    padding-left: 24%;
+}
+.navmenu a{
+    color: #710071;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 550;
+    transition: all .42s ease;
+}
+.navmenu a:hover{   
+    color: rgb(253, 250, 252);
+    background-color: #710071;
+}
