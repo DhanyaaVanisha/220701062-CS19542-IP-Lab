@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Management</title>
+</head>
+<body>
+    <h1>Product Management Dashboard</h1>
+    <nav>
+        <a href="?action=add">Add Product</a> |
+        <a href="?action=view">View Products</a> |
+        <a href="?action=search">Search Products</a>
+    </nav>
+
+    <!-- Add Product Form -->
+    <div id="addProductForm" style="display: none;">
+        <h2>Add Product</h2>
+        <form action="ProductController" method="post">
+            <input type="hidden" name="action" value="add">
+            <label for="name">Product Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required><br><br>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" step="0.01" required><br><br>
+            <label for="stock">Stock Quantity:</label>
+            <input type="number" id="stock" name="stock" required><br><br>
+            <input type="submit" value="Add Product">
+        </form>
+    </div>
+
+    <!-- Search Products Form -->
+    <div id="searchProductsForm" style="display: none;">
+        <h2>Search Products</h2>
+        <form action="ProductController" method="get">
+            <input type="hidden" name="action" value="search">
+            <label for="query">Search:</label>
+            <input type="text" id="query" name="query" required><br><br>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <!-- View Products Table -->
+    <div id="viewProductsTable" style="display: none;">
+        <h2>View Products</h2>
+        <!-- Table will be populated by the servlet -->
+    </div>
+
+    <!-- Edit Product Form -->
+    <div id="editProductForm" style="display: none;">
+        <h2>Edit Product</h2>
+        <form action="ProductController" method="post">
+            <input type="hidden" name="action" value="update">
+            <input type="hidden" id="editId" name="id">
+            <label for="editName">Product Name:</label>
+            <input type="text" id="editName" name="name" required><br><br>
+            <label for="editCategory">Category:</label>
+            <input type="text" id="editCategory" name="category" required><br><br>
+            <label for="editPrice">Price:</label>
+            <input type="number" id="editPrice" name="price" step="0.01" required><br><br>
+            <label for="editStock">Stock Quantity:</label>
+            <input type="number" id="editStock" name="stock" required><br><br>
+            <input type="submit" value="Update Product">
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var action = urlParams.get('action');
+
+            if (action === 'add') {
+                document.getElementById('addProductForm').style.display = 'block';
+            } else if (action === 'view') {
+                document.getElementById('viewProductsTable').style.display = 'block';
+                fetch('ProductController?action=view')
+                    .then(response => response.text())
+                    .then(html => document.getElementById('viewProductsTable').innerHTML = html);
+            } else if (action === 'search') {
+                document.getElementById('searchProductsForm').style.display = 'block';
+            } else if (action === 'edit') {
+                document.getElementById('editProductForm').style.display = 'block';
+                var id = urlParams.get('id');
+                fetch('ProductController?action=edit&id=' + id)
+                    .then(response => response.text())
+                    .then(html => document.getElementById('editProductForm').innerHTML = html);
+            }
+        });
+    </script>
+</body>
+</html>
