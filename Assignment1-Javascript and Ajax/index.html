@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Task Manager</h1>
+  </header>
+
+  <!-- Sidebar for Filters -->
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#" id="filter-all">All</a></li>
+        <li><a href="#" id="filter-pending">Pending</a></li>
+        <li><a href="#" id="filter-completed">Completed</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Form for Adding Tasks -->
+    <section class="task-form">
+      <input type="text" id="task-title" placeholder="Task Title" required>
+      <textarea id="task-desc" placeholder="Task Description" required></textarea>
+      <input type="date" id="task-date" required>
+      <button id="add-task-btn">Add Task</button>
+    </section>
+
+    <!-- Task List Section -->
+    <section class="task-list" id="task-list">
+      <!-- Dynamic Task Items will be inserted here -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <nav>
+      <a href="#">Home</a> |
+      <a href="#">About</a> |
+      <a href="#">Contact</a>
+    </nav>
+    <p>&copy; 2024 Task Manager. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
