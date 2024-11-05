@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(243, 211, 219); 
+    color: #333; 
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.resume {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
+}
+
+.left {
+    width: 35%;
+    background-color: #e0e0e0; 
+    color: #333; 
+    padding: 20px;
+    border-right: 1px solid #f8f8f8; 
+}
+
+.left h1, .left h2 {
+    color: #030202; 
+}
+
+.left img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 75px; 
+    border: 3px solid #ff9090; 
+    margin-bottom: 10px;
+}
+
+.left .profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.left .contact ul, .left .education ul, .left .languages ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.left .contact ul li, .left .education ul li, .left .languages ul li {
+    margin-bottom: 10px;
+}
+
+.left .education h3, .left .education p {
+    color: #000000; 
+}
+
+.right {
+    width: 65%;
+    padding: 20px;
+}
+
+.right h2 {
+    border-bottom: 2px solid #333; 
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+.right .profile-text p, .right .project ul li p {
+    margin-bottom: 10px;
+}
+
+.right .project ul, .right .additional-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.right .project ul li, .right .additional-info ul li {
+    margin-bottom: 10px;
+}
+
+.right .skills ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.right .skills ul li {
+    margin-bottom: 10px;
+}
+
+.right .skills .bar {
+    display: block;
+    height: 5px;
+    background: #ff9999; 
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.right .skills .html {
+    width: 90%;
+    background: #dc7373;
+    height: 100%;
+}
+
+.right .skills .css {
+    width: 80%;
+    background: #666; 
+    height: 100%;
+}
+
+.right .skills .c-programming {
+    width: 40%;
+    background: #666; 
+    height: 100%;
+}
+
+.right .skills .python {
+    width: 70%;
+    background: #666; 
+    height: 100%;
+}
+
+.right .interests ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.right .interests ul li {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+</head>
+<body>
+    <h1>Course Registration Form</h1>
+    <form action="course" method="post">
+        <label for="studentName">Student Name:</label><br>
+        <input type="text" id="studentName" name="studentName" required><br><br>
+
+        <label for="rollNo">Roll No:</label><br>
+        <input type="text" id="rollNo" name="rollNo" required><br><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="female">Female</label><br><br>
+
+        <label for="year">Year:</label><br>
+        <select id="year" name="year" required>
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+        </select><br><br>
+
+        <label for="department">Department:</label><br>
+        <input type="text" id="department" name="department" required><br><br>
+
+        <label for="section">Section:</label><br>
+        <input type="text" id="section" name="section" required><br><br>
+
+        <label for="mobileNo">Mobile No:</label><br>
+        <input type="text" id="mobileNo" name="mobileNo" required><br><br>
+
+        <label for="email">E-Mail ID:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="3" required></textarea><br><br>
+
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city" required><br><br>
+
+        <label for="country">Country:</label><br>
+        <input type="text" id="country" name="country" required><br><br>
+
+        <label for="pincode">Pincode:</label><br>
+        <input type="text" id="pincode" name="pincode" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
